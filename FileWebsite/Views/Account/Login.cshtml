@@ -1,0 +1,46 @@
+﻿@using FileWebsite.Models
+@model LoginViewModel
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                
+                <div class="col l6 s12">
+                    <div class="container" style="position:relative; right:50%; left:50%">
+                        <h3 class="header center orange-text">Login</h3>
+                        <div class="form-group" style="margin-right:50px">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    @Html.LabelFor(m => m.username)
+                                </div>
+                                <div class="col-md-8">
+                                    @Html.TextBoxFor(m => m.username, new { style = "width:450px" , length="50" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    @Html.LabelFor(m => m.password)
+                                </div>
+                                <div class="col-md-8">
+                                    @Html.TextBoxFor(m => m.password, new { style = "width:450px" , length = "50" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Log in" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
